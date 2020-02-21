@@ -1,0 +1,51 @@
+body{
+    max-width: 80vh;
+    background-color: rgb(255, 255, 255);
+    color: rgb(36, 41, 46);
+    overflow-wrap: break-word;
+    line-height: 1.5;
+    font-size: 14px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    box-sizing: border-box;
+    overflow: hidden;
+    margin: 0;
+}
+
+.header{
+    padding: 1rem;
+    text-decoration: none;
+    text-emphasis: none;
+}
+.nav{
+    text-align: center;
+}
+a{
+    text-decoration: none;
+    
+}
+.home{
+    text-align: left;
+    padding-left: 5rem;
+}
+.about{
+    text-align: right;
+    padding-left: 5rem;
+}
+
+.section{
+    text-align: center;
+    padding-top: 20%;
+    padding-bottom: 20%;
+}
+.input{
+    width: 50%;
+    
+}
+
+.footer{
+    text-align: center;
+    position: static;
+    padding-bottom: 0;
+    padding-top: 0;
+
+}
