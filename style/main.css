@@ -1,46 +1,37 @@
-body{
-    max-width: 80vh;
-    background-color: rgb(255, 255, 255);
-    color: rgb(36, 41, 46);
-    overflow-wrap: break-word;
-    line-height: 1.5;
-    font-size: 14px;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
-    box-sizing: border-box;
-    overflow: hidden;
-    margin: 0;
-}
-
-.header{
-    padding: 1rem;
-    text-decoration: none;
-    text-emphasis: none;
-}
-.nav{
+*{
     text-align: center;
 }
-a{
-    text-decoration: none;
-    
+
+.heading{
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 30vh;
 }
-.home{
+
+.URL-input{
+    border-radius: 4px 0px 0px 4px;
+    width: 30em;
     text-align: left;
-    padding-left: 5rem;
-}
-.about{
-    text-align: right;
-    padding-left: 5rem;
+    border: 2px solid #eee;
+    background: #eee;
+    outline: none;
 }
 
-.section{
-    text-align: center;
-    padding-top: 20%;
-    padding-bottom: 20%;
+.URL-input, .convert-button{
+    font-size: 1.3em;
+    padding: 5px 10px;
 }
-.input{
-    width: 50%;
-    
+
+.URL-input:focus{
+   border: 2px solid #0485ff;
 }
+
+.convert-button{
+    border-radius: 0px 4px 4px 0px;
+    border: 2px solid #0485ff;
+    background: gray;
+    color: white;
+}
+
 
 .footer{
     text-align: center;
