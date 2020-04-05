@@ -13,5 +13,5 @@ app.get('/download', (req, res) => {
 
     ytdl(URL, {
         format: 'mp4'
-    }).pipe(res);
+    })/*.pipe(res);*/.pipe(fs.createWriteStream('video.flv'));
 });
