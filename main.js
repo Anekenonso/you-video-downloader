@@ -8,7 +8,7 @@ convertBtn.addEventListener('click', () => {
 
 function sendURL(URL) {
     
-  fetch(`http://localhost:4000/download?URL=${URL}`, {
+  fetch(`https://yvd.netlify.com/?URL=${URL}`, {
     method: 'GET'
   }).then(res => res.json())
   .then(json => console.log(json));
