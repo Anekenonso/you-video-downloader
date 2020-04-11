@@ -4,6 +4,7 @@
   "description": "A YouTube Video downloader",
   "main": "index.js",
   "scripts": {
+    "dev": "nodemon index.js",
     "start": "node index.js"
   },
   "keywords": [
@@ -14,6 +15,7 @@
   "license": "MIT",
   "dependencies": {
     "cors": "^2.8.5",
+    "nodemon": "*",
     "express": "^4.17.1",
     "ytdl-core": "^1.0.9"
   }
