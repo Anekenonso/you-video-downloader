@@ -1,5 +1,12 @@
 *{
     text-align: center;
+
+}   
+
+body{
+    overflow-y: hidden;
+    overflow-x: hidden;
+    overflow-wrap: normal;
 }
 
 .heading{
@@ -9,7 +16,8 @@
 
 .URL-input{
     border-radius: 4px 0px 0px 4px;
-    width: 30em;
+    /*width: 30em;*/
+    width: 50%;
     text-align: left;
     border: 2px solid #eee;
     background: #eee;
