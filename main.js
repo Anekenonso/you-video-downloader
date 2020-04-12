@@ -5,19 +5,19 @@ var URLinput = document.querySelector('.URL-input');
 
 
 //server to connect to for download
-var server = 'http://localhost:4000';
+//var server = 'http://localhost:4000';
 
 
 // convert to mp3
 mp3Btn.addEventListener('click', () => {
-    console.log(`URL: ${URLinput.value}`);
+    console.log(`url: ${URLinput.value}`);
       redirectMp3(URLinput.value);
 });
 
 
 //convert to mp4
 mp4Btn.addEventListener('click', () =>{
-      console.log(`URL: ${URLinput.value}`);
+      console.log(`url: ${URLinput.value}`);
       redirectMp4(URLinput.value);
 });
 
