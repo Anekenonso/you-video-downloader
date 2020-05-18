@@ -8,7 +8,7 @@ convertBtn.addEventListener('click', () => {
 
 function sendURL(URL) {
 
-  fetch(`https://localhost:PORT?URL=${URL}`, {
+  fetch(`https://localhost:4000?URL=${URL}`, {
     method: 'GET'
   }).then(res => res.json())
   .then(json => console.log(json));
