@@ -7,12 +7,12 @@ convertBtn.addEventListener('click', () => {
 });
 
 function sendURL(URL) {
-    
-  fetch(`https://yvd.netlify.com/?URL=${URL}`, {
+
+  fetch(`https://localhost:PORT?URL=${URL}`, {
     method: 'GET'
   }).then(res => res.json())
   .then(json => console.log(json));
-  
+
 
   window.location.href = `http://localhost:4000/download?URL=${URL}`;
 }

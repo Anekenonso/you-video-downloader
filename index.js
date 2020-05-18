@@ -1,9 +1,10 @@
 const express = require('express');
 const cors = require('cors');
 const ytdl = require('ytdl-core');
+const PORT = process.env.PORT || 4000;
 const app = express();
 
-app.listen(4000, ()=> {
+app.listen(PORT, ()=> {
     console.log('server running on port 4000');
 });
 
