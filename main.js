@@ -1,18 +1,13 @@
-var convertBtn = document.querySelector('.convert-button');
-var URLinput = document.querySelector('.URL-input');
+const mp4Btn = document.getElementById('convert-button');
+const URLinput = document.querySelector('.URL-input');
+const server = `http://localhost:${PORT}`;
 
-convertBtn.addEventListener('click', () => {
-    console.log(`URL: ${URLinput.value}`);
-      sendURL(URLinput.value);
+
+mp4Btn.addEventListener('click', () => {
+  console.log(`URL: ${URLinput.value}`);
+  redirectMP4(URLinput.value);
 });
 
-function sendURL(URL) {
-
-  fetch(`https://localhost:4000?URL=${URL}`, {
-    method: 'GET'
-  }).then(res => res.json())
-  .then(json => console.log(json));
-
-
-  window.location.href = `http://localhost:4000/download?URL=${URL}`;
+function redirectMp4(query) {
+  windows.location.href = `${server}/downloadmp4?url=${query}`;
 }

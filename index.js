@@ -1,18 +1,32 @@
 const express = require('express');
+const path = require('path');
 const cors = require('cors');
 const ytdl = require('ytdl-core');
-const PORT = process.env.PORT || 4000;
+const router = express.Router();
+
 const app = express();
 
-app.listen(PORT, ()=> {
-    console.log('server running on port 4000');
+const PORT = process.env.port || 8000
+
+app.use(cors());
+
+app.use('/', router);
+
+router.get('/',function(req,res){
+  res.sendFile(path.join(__dirname+'/index.html'));
+  //__dirname : It will resolve to your project folder.
 });
 
-app.get('download', (req, res) => {
-    var URL = req.query.URL;
-    res.header('Content-Disposition', 'attachment; filename="video.mp4"');
+app.use('/', router);
 
-    ytdl(URL, {
-        format: 'mp4'
-    }).pipe(res);/*.pipe(fs.createWriteStream('video.flv'));*/
+app.listen(PORT, () => {
+  console.log(`server running on port ${PORT}`);
+});
+
+app.get('/download', (reg, res) => {
+  let url = reg.query.url;
+  res.header('content-Disposition', 'attachment; filename="youTube-video.mp4"');
+  ytdl(url, {
+    format: 'mp4'
+  }).pipe(res);
 });
