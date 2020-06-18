@@ -1,13 +1,25 @@
-const mp4Btn = document.getElementById('convert-button');
+const convertBtn = document.getElementById('button');
 const URLinput = document.querySelector('.URL-input');
-const server = `http://localhost:${PORT}`;
 
 
-mp4Btn.addEventListener('click', () => {
-  console.log(`URL: ${URLinput.value}`);
-  redirectMP4(URLinput.value);
+convertBtn.addEventListener('click', () =>{
+  if (!URLinput.value) {
+		alert('Enter YouTube URL');
+	} else {
+    sendURL(URLinput.value);
+  }
+	
 });
 
-function redirectMp4(query) {
-  windows.location.href = `${server}/downloadmp4?url=${query}`;
+function sendURL(query) {
+    
+ /* fetch(`https://localhost:3000/download?URL=${URL}`, {
+    method: 'GET'
+  }).then(res => res.json())
+  .then(json => console.log(json));
+  */
+
+  window.location.href = `http://localhost:3000/download?
+  URL=${query}`;
+
 }
